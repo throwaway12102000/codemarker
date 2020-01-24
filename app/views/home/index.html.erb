@@ -9,16 +9,19 @@
 }
 </style>
 <script>
-var video = document.getElementById("myVideo");
+
+
 function playvid() {
-  video.play();
+  var video = document.getElementById("myVideo");
+  if(video.paused)
+    video.play();
 }
 
 </script>
 
 </head>
 
-<body onload="playvid()">
+<body onload="setInterval(playvid(), 1000)">
 <video autoplay loop id="myvideo">
   <source src="rickroll.mp4" type="video/mp4">
 </video> 
